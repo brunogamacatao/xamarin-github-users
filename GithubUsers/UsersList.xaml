@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GithubUsers.UsersList"
+    Title="GitHub Users" Padding="10, 40, 10, 10">
+	<ContentPage.Content>
+        <StackLayout>
+            <Button Text="Load Users" Clicked="OnLoadUsersClick"></Button>
+            <ListView x:Name="listaDeUsuarios" ItemSelected="OnUserSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Height="30" 
+                                   Text="{Binding login}"
+                                   ImageSource="{Binding avatar_url}">
+                         </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

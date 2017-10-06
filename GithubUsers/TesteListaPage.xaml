@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Padding="10,40,10,10 " xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GithubUsers.TesteListaPage">
+	<ContentPage.Content>
+        <StackLayout>
+            <Button Text="Carregar Usuários" Clicked="OnCarregarClicked"></Button>
+            <ListView x:Name="listaDeUsuarios" ItemSelected="OnUsuarioSelected">
+                <!-- Detalhe do usuario -->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Height="30" 
+                                   Text="{Binding login}"
+                                   ImageSource="{Binding avatar_url}">
+                         </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <!-- FIM - Detalhe do usuario -->
+            </ListView>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
